@@ -1,5 +1,99 @@
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "vendor/reset";
+
+html {
+    font-size: 10px;
+}
+
 body {
-    background-color: black;
-    font-size: 21px;
-    color: white;
+    font-size: 2.1rem;
+    color: $color-white;
+    font-family: "Gotham Pro", sans-serif;
+    background: url('../images/main-bg.png') repeat-y 50% 0;
+
+    @include media-max(991px) {
+        font-size: 1.8rem;
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.color-primary {
+    color: $color-primary;
+}
+.color-secondary {
+    color: $color-secondary;
+}
+
+.fw-500 {font-weight: 500}
+.fw-600 {font-weight: 600}
+
+.decor {
+    position: absolute;
+}
+
+.anim-up {
+    animation: MoveUpDown2 3s linear infinite;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+
+    &.active {
+        display: block;
+    }
+}
+
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/menu-mobile";
+@import "blocks/burger";
+@import "blocks/main";
+@import "blocks/top-banner";
+@import "blocks/btn";
+@import "blocks/advantages";
+@import "blocks/video-program";
+@import "blocks/founder";
+@import "blocks/relevance";
+@import "blocks/finance";
+@import "blocks/cooperation";
+@import "blocks/franchise";
+@import "blocks/business";
+@import "blocks/provide";
+@import "blocks/form";
+@import "blocks/input";
+@import "blocks/socials";
+@import "blocks/modal";
+@import "blocks/footer";
+
+
+/* Animations */
+@import "animations";
+
+
+@include media-min(992px) {
+    .visible-mobile {
+        display: none;
+    }
+}
+
+@include media-max(992px) {
+    .visible-pc {
+        display: none;
+    }
 }

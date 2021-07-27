@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em 1.9em;
+
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-white;
+  text-decoration: none;
+
+  background: $color-primary;
+  border: none;
+  cursor: pointer;
+  border-radius: 11px;
+  transition: .3s;
+
+  @include media-max(991px) {
+    padding: 0.7em 1.3em;
+    font-size: 1.4rem;
+  }
+
+  &--pink {
+    background: $color-primary;
+    &:hover {
+      background: darken($color-primary, 9%);
+    }
+  }
+
+  &--blue {
+    background: $color-blue;
+    color: $color-secondary;
+    &:hover {
+      background: darken($color-blue, 9%);
+    }
+  }
+
+  &--hover-gradient {
+    position: relative;
+    transition: .2s ease-in-out, background-color 0s;
+    overflow: hidden;
+
+    &:hover {
+      background: linear-gradient(270deg, #F4BA44 0%, #EA6468 24.48%, #BF64D9 49.48%, #69A8F1 77.08%, #63D7BD 99.48%);;
+      color: $color-white;
+    }
+  }
+}

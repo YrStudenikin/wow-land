@@ -1,0 +1,48 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: $z-index-header;
+  background: transparent;
+  &__container {
+    max-width: 1265px;
+
+    @include media-max(1300px) {
+      max-width: 1100px;
+    }
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.8rem;
+    &>* {
+      display: flex;
+      align-items: center;
+    }
+
+    @include media-max(991px) {
+      padding-top: 2.5rem;
+    }
+  }
+  &__left {
+    width: 60%;
+
+    @include media-max(1300px) {
+      width: 54%;
+    }
+  }
+  &__right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include media-max(1300px) {
+      width: 46%;
+    }
+  }
+  &__tel {
+    font-size: 1.8rem;
+    margin-right: 6rem;
+  }
+}

@@ -1,0 +1,31 @@
+.advantages {
+  &__item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      padding-bottom: 2.8rem;
+
+      @include media-max(991px) {
+        padding-bottom: 2rem;
+      }
+    }
+
+    @include media-max(991px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__icon {
+    margin-right: 2rem;
+    width: 3.1rem;
+    height: 3.1rem;
+
+    @include media-max(991px) {
+      margin-right: 1.4rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+}

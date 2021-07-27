@@ -5,11 +5,19 @@
 </head>
 <body>
 
+<div class="page">
     {{> header }}
 
-    {{> body }}
+    <main class="main">
+        {{> body }}
+    </main>
+
+    {{> contact-modal }}
+    {{> video-modal }}
 
     {{> footer }}
+
+</div>
 
     <script src="assets/js/app.js"></script>
 </body>

@@ -1,0 +1,164 @@
+.cooperation {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -130px;
+
+  @include media-max(1200px) {
+    margin-bottom: -120px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 80px;
+    color: $color-secondary;
+
+    @include media-max(1200px) {
+      font-size: 5rem;
+      margin-bottom: 40px;
+    }
+
+    @include media-max(1200px) {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__tables {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include media-max(1200px) {
+      flex-direction: column;
+    }
+  }
+
+  &__decor {
+    &-1 {
+      z-index: -1;
+      left: -260px;
+      top: -223px;
+      max-width: 360px;
+
+      @include media-max(1200px) {
+        left: -30px;
+        top: initial;
+        bottom: -180px;
+        z-index: 1;
+        max-width: 310px;
+        transform: rotate(-35deg);
+      }
+
+      @include media-max(680px) {
+        left: -90px;
+        bottom: -150px;
+        max-width: 260px;
+      }
+    }
+
+    &-2 {
+      z-index: -1;
+      top: -20px;
+      left: -300px;
+
+      @include media-max(1200px) {
+        display: none;
+      }
+    }
+
+    &-3 {
+      right: -280px;
+      bottom: -100px;
+      max-width: 330px;
+
+      @include media-max(1200px) {
+        left: 200px;
+        top: initial;
+        bottom: -130px;
+        z-index: 0;
+        max-width: 250px;
+      }
+
+      @include media-max(680px) {
+        left: 100px;
+        bottom: -100px;
+        max-width: 200px;
+      }
+    }
+
+    &-4 {
+      right: 0;
+      top: 90px;
+      z-index: -1;
+    }
+  }
+}
+
+.cooperation-table {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  background: $color-white;
+
+  @include media-max(1200px) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+
+  &__row {
+    background: $color-white;
+    height: 14.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5.5rem;
+    line-height: 1.2;
+
+    &:last-child {
+      border-bottom-right-radius: 17px;
+      border-bottom-left-radius: 17px;
+    }
+
+    &:nth-child(2){
+      border-bottom: 1px solid #E1E1E1;
+    }
+
+    &.row--highlight {
+      position: relative;
+      height: 11.5rem;
+      box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.2);
+      border-radius: 17px;
+
+      .cooperation-table__row-title {
+        color: $color-secondary;
+      }
+    }
+
+    &-title {
+      font-weight: 900;
+      font-size: 3.2rem;
+      color: $color-primary;
+      padding-bottom: 5px;
+
+      @include media-max(1200px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-hint {
+      font-weight: normal;
+      font-size: 20px;
+      color: #8A8A8A;
+    }
+
+    &-hint-min {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+
+  &__item {
+    color: $color-white;
+    padding-right: 2.4rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

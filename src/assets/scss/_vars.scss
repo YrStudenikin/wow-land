@@ -1,0 +1,22 @@
+$color-white: #FFFFFF;
+$color-black: #181818;
+$color-blue: #49C8FF;
+
+$color-primary: #E65388;
+$color-secondary: #19075D;
+
+$z-index-header: 100;
+
+
+@mixin absolute-center-all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-gorizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
